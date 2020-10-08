@@ -1,9 +1,9 @@
 function appendList() {
-    var ul = document.getElementById('listitems');
-    var li = document.createElement('li');
-    var item = document.getElementById('uusylesanne');
-    li.appendChild(document.createTextNode(item.value));
-    ul.appendChild(li);
+  var ul = document.getElementById("listitems");
+  var li = document.createElement("li");
+  var item = document.getElementById("uusylesanne");
+  li.appendChild(document.createTextNode(item.value));
+  ul.appendChild(li);
 }
 
 // Create a "close" button and append it to each list item
@@ -23,17 +23,53 @@ for (i = 0; i < myNodelist.length; i++) {
 var close = document.getElementsByClassName("close");
 var i;
 for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
+  close[i].onclick = function () {
     var div = this.parentElement;
     div.style.display = "none";
-  }
+  };
 }
 
 // Add a "checked" symbol when clicking on a list item
 
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
+var list = document.querySelector("ul");
+list.addEventListener(
+  "click",
+  function (ev) {
+    if (ev.target.tagName === "LI") {
+      ev.target.classList.toggle("checked");
+    }
+  },
+  false
+);
+
+// RASMUS //
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
+
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {
+    slideIndex = 1;
   }
-}, false);
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+}
