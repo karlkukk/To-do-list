@@ -37,6 +37,10 @@ header {
     float: left;
 }
 
+.svg2 {
+    float: right;
+}
+
 @keyframes dash-path {
     50% {
         stroke-dashoffset: 0;
