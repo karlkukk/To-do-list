@@ -1,11 +1,3 @@
-function appendList() {
-  var ul = document.getElementById("listitems");
-  var li = document.createElement("li");
-  var item = document.getElementById("uusylesanne");
-  li.appendChild(document.createTextNode(item.value));
-  ul.appendChild(li);
-}
-
 // Create a "close" button and append it to each list item
 
 var myNodelist = document.getElementsByClassName("yl");
@@ -72,4 +64,31 @@ function showSlides(n) {
   }
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
+}
+
+// Create a new list item when clicking on the "Add" button
+function newElement() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("uusylesanne").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === "") {
+    alert("You must write something!");
+  } else {
+    document.getElementById("listitems").appendChild(li);
+  }
+  document.getElementById("uusylesanne").value = "";
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function () {
+      var div = this.parentElement;
+      div.style.display = "none";
+    };
+  }
 }
