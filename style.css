@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 * {
     box-sizing: border-box;
 }
@@ -17,12 +17,12 @@ header {
     margin: 0 auto;
 }
 
-ul {
+.ylesanded ul {
     margin-top: 100px;
     
 }
 
-ul li {
+.ylesanded ul li {
     background-color: #f0f8ff;
     list-style-type: none;
     padding: 12px 8px 12px;
@@ -31,11 +31,11 @@ ul li {
     transition: 0.2s;
 }
 
-ul li:hover, ul li:nth-child(odd):hover, button:hover {
+.ylesanded ul li:hover, .ylesanded ul li:nth-child(odd):hover, button:hover {
     background-color: rgb(198, 228, 255);
 }
 
-ul li:nth-child(odd) {
+.ylesanded ul li:nth-child(odd) {
     background-color: rgb(232, 244, 255);
 }
 
@@ -67,7 +67,9 @@ ul li:nth-child(odd) {
       border: none;
       cursor: pointer;
   }
-=======
+
+
+
 ul {
   list-style-type: none;
 }
@@ -153,5 +155,4 @@ body {
   padding: 5px;
   background: #1abc9c;
   color: white !important;
-}
->>>>>>> 6d0eac31afa8dd6af4a444aa8e1024d528f15050
+
