@@ -2,6 +2,17 @@
   box-sizing: border-box;
 }
 
+@keyframes star {
+  to {
+    fill: yellow;
+  }
+}
+polygon {
+  stroke: black;
+  fill: white;
+  animation: star 2s alternate infinite;
+}
+
 body {
   font-family: Verdana, sans-serif;
 }
