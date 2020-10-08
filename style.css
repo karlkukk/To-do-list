@@ -20,6 +20,44 @@ header {
   margin: 0 auto;
 }
 
+/* SVG */
+
+.svg1 {
+    float: left;
+}
+
+@keyframes dash-path {
+    50% {
+        stroke-dashoffset: 0;
+        fill: white;
+    }
+    
+    100% {
+      
+      fill: #1c7bc9;
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes dash-circle {
+    100% {
+      stroke-dashoffset: 0;
+      
+    }
+  }
+
+  path {
+    stroke-dasharray: 180;
+    stroke-dashoffset: 180;
+    animation: dash-path 2.5s forwards;
+  }
+  
+  circle {
+    stroke-dasharray: 189;
+    stroke-dashoffset: 189;
+    animation: dash-circle 2.5s forwards;
+  }
+
 /* TABEL */
 header {
   text-align: center;
