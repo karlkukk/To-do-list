@@ -16,6 +16,12 @@ header {
   margin: 0 auto;
 }
 
+/* TABEL */
+header {
+  text-align: center;
+  margin-top: 100px;
+}
+
 .ylesanded ul {
   margin-top: 100px;
 }
@@ -68,24 +74,32 @@ button {
   cursor: pointer;
 }
 
+.close {
+  float: right;
+  transition: 0.2s;
+}
+
+.close:hover {
+  background-color: #1c7bc9;
+  color: white;
+}
+
+ul li.checked {
+  text-decoration: line-through;
+}
+
+/* KALENDER */
 ul {
   list-style-type: none;
 }
 
-body {
-  font-family: Verdana, sans-serif;
-}
-
 /* Month header */
-.container {
-  width: 900px;
-  margin: 0 auto;
-}
 
 .month {
   padding: 70px 25px;
   background: #1c7bc9;
   text-align: center;
+  margin-top: 200px;
 }
 
 .sisu {
